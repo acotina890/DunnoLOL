@@ -17,7 +17,9 @@ public class Modificaciones : MonoBehaviour
 
         direccion = new Vector3(0, 0, 1);
 
-        
+        saludo();
+        saltar();
+
         Curacion();
         DañoObtenido();
     }
@@ -42,4 +44,15 @@ public class Modificaciones : MonoBehaviour
     {
         vida -= 40;
     }
+
+    void saludo()
+    {
+        Debug.Log("Hola");
+    }
+
+    void saltar()
+    {
+        Debug.Log("Saltando");
+    }
+
 }
