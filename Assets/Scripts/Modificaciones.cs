@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Modificaciones : MonoBehaviour
 {
-    public int vida, monedas;
+    public int monedas, vida;
     public float velocidad;
     public Vector3 direccion;
 
