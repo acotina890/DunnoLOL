@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Modificaciones : MonoBehaviour
 {
-    public int vida;
+    public int vida, monedas;
     public float velocidad;
     public Vector3 direccion;
 
@@ -17,8 +17,7 @@ public class Modificaciones : MonoBehaviour
 
         direccion = new Vector3(0, 0, 1);
 
-        saludo();
-        saltar();
+        monedas = 0;
 
         Curacion();
         DañoObtenido();
@@ -28,6 +27,7 @@ public class Modificaciones : MonoBehaviour
     void Update()
     {
         MovObjeto();
+        recoleccionMonedas();
     }
 
     void MovObjeto()
@@ -45,14 +45,11 @@ public class Modificaciones : MonoBehaviour
         vida -= 40;
     }
 
-    void saludo()
+    void recoleccionMonedas()
     {
-        Debug.Log("Hola");
+        monedas++;
+        Debug.Log("Recolecté "+monedas+" monedas");
     }
 
-    void saltar()
-    {
-        Debug.Log("Saltando");
-    }
 
 }
